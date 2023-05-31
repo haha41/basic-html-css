@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>섹션 관련 요소</title>
 </head>
+
 <body>
-  <!-- 네이티브 요소 -->
+  <!-- 네이티브 요소: 웹 페이지의 구조와 콘텐츠를 정의하고 표현함 -->
   <header>본문 헤더</header>
   <nav>내비게이션</nav>
   <main>
@@ -28,15 +30,17 @@
       <footer>섹션 푸터</footer>
     </article>
   </main>
+  <!-- main은 한번만 가능(랜드마크 역할), 나머지 main : 구조상 필요, hidden으로 숨기기 -->
   <main hidden></main>
   <main hidden></main>
   <aside>부가 콘텐츠</aside>
   <footer>본문 푸터</footer>
 
-  <!-- 컨테이너 요소 -->
+  <!-- 컨테이너 요소: 다른 요소들을 묶거나 그룹화하는데 사용됨 -->
   <div role="banner">본문 헤더</div>
   <div role="navigation">내비게이션</div>
   <div role="main"></div>
   <div role="contentinfo">본문 푸터</div>
 </body>
+
 </html>
