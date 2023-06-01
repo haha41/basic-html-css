@@ -14,19 +14,65 @@ body {
   color: hsla(110, 100%, 100%, 1);
 }
 
+/* 가상 요소 선택자 */
+::selection {
+  background: #373e6a;
+  color: hotpink;
+}
+
 /* 클래스 선택자 */
 .fancy {
   font-weight: bold;
   text-shadow: 4px 4px 3px #77f;
 }
 
+.align {
+    text-align: center;
+}
+
 ul.menu{
 	margin: 0;
 	padding-left: 0;
-  color: #f00;
+  color: #0F0;
 }
 
 /* 아이디 선택자 */
 #demo {
   border: red 5px solid;
+}
+
+/* 속성 선택자 */
+.menu a[href$=".html"] {
+  background-color: blueviolet;
+}
+
+/* 선택자 목록 */
+.fancy, .menu{
+  font-size: 24px;
+}
+
+/* 가상 요소 선택자 */
+.align::before{
+  content: "이전 요소";
+}
+
+.align::after{
+  content: "다음 요소";
+}
+
+/* 가상 클래스 1,2, 7,8*/
+/* .menu li:nth-child(-n + 2), .menu li:nth-child(n + 7) {
+  color: yellow;
+} */
+.menu li:nth-child(odd) {
+  color: yellow;
+}
+
+.menu a:hover{
+  border: 5px solid orange;
+}
+
+/* h1이면서 메뉴 클래스를 가진 캑체 위에 마우스를 올렸을 때 */
+h1.menu:hover{
+  background-color: pink;
 }
