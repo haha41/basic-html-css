@@ -5,29 +5,23 @@
   color: inherit;
 }
 
-/* 태그 선택자 */
-body {
-  font-family: "SUIT";
-  margin: 0;
-  font-weight: 300;
-  background-color: #000;
-  color: hsla(110, 100%, 100%, 1);
-}
-
 /* 가상 요소 선택자 */
 ::selection {
   background: #373e6a;
   color: hotpink;
 }
 
-/* 클래스 선택자 */
-.fancy {
-  font-weight: bold;
+/* 태그 선택자 */
+body {
+  font-family: "SUIT";
+  font-weight: 300;
+  background-color: #000;
+  color: hsla(110, 100%, 100%, 1);
   text-shadow: 4px 4px 3px #77f;
 }
 
 .align {
-    text-align: center;
+  text-align: center;
 }
 
 ul.menu{
@@ -43,11 +37,12 @@ ul.menu{
 
 /* 속성 선택자 */
 .menu a[href$=".html"] {
-  background-color: blueviolet;
+  background-color: blue;
 }
 
 /* 선택자 목록 */
-.fancy, .menu{
+.fancy,
+.menu{
   font-size: 24px;
 }
 
@@ -73,6 +68,7 @@ ul.menu{
 }
 
 /* h1이면서 메뉴 클래스를 가진 캑체 위에 마우스를 올렸을 때 */
-h1.menu:hover{
-  background-color: pink;
+h1.menu:hover,
+h1.menu:focus {
+  background-color: teal;
 }
